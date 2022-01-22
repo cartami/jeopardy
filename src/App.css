@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  background: url("https://static2.srcdn.com/wordpress/wp-content/uploads/2018/08/Alex-Trebek-Hosting-Jeopardy.jpg")
+    no-repeat center fixed;
+  background-size: cover;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App {
+  font-family: sans-serif;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  margin-top: 60px;
+  text-shadow: 5px 5px 0px black;
+}
+
+.answer-button-container {
+  margin: 200px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.answer-details {
+  width: 25%;
+  position: fixed;
+  text-align: center;
+  top: 16px;
+  left: 24px;
+  line-height: 24px;
+}
+
+.display-question {
+  font-family: sans-serif;
+  font-size: 60px;
+  /*sets max-width of <div>*/
+  max-width: 1000px;
+}
+
+/* space between answer and show answer button */
+.display-answer-button {
+  margin-top: 40px;
+  background-color: darkblue;
+  text-transform: uppercase;
+  font-weight: 50px;
+  font-size: 24px;
+}
+
+.display-answer {
+  margin-top: 40px;
+  font-weight: 50px;
+  font-size: 24px;
+}
+
+.displayed-question:hover,
+.shown-answer:hover {
+  color: red;
+}
+
+button {
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: white;
+  color: black;
+  display: inline-block;
+  line-height: 50px;
+  padding: 14px;
+  border-radius: 6px;
+}
+
+button:hover {
+  color: red;
+}
+
+.getQuestion {
+  background-color: gold;
+  color: black;
+}
+
+.flex-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.score-buttons {
+  position: fixed;
+  right: 24px;
+  top: 24px;
+  width: 40%;
+}
+
+.button-increase {
+  background-color: darkblue;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: black;
+}
+
+.button-decrease {
+  display: inline-block;
+  position: relative;
+  background-color: pink;
+  color: black;
+  cursor: pointer;
+}
+
+.button-decrease:hover {
+  color: yellow;
+}
+
+.button-reset {
+  display: inline-block;
+  position: relative;
+  background-color: red;
+  color: black;
+  cursor: pointer;
 }
